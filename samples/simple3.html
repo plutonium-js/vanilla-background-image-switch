@@ -1,0 +1,92 @@
+<!DOCTYPE html><html><head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>[simple3] - Background Image Switch Sample</title>
+	
+	<!-- plutonium [vanilla-background-image-switch] -->
+	<script src="https://cdn.jsdelivr.net/npm/@plutonium-js/vanilla-background-image-switch@1/dist/bundle.js"></script>
+	
+	<!-- app css -->
+	<style>
+		body {
+			font-family:"Times New Roman", Times, serif;
+			background-color:#d9e2eb;
+		}
+		body * {
+			box-sizing:border-box;
+		}
+		#container {
+			display:grid;
+			position:fixed;
+			overflow:hidden;
+			width:80%;
+			height:80%;
+			top:0;
+			bottom:0;
+			left:0;
+			right:0;
+			margin:auto;
+			border:dashed 4px #666;
+			align-content:center;
+			justify-content:center;
+		}
+	</style>
+
+</head>
+<body style="">
+
+	<div id="container">
+		<!--
+			This sample illustrates how to define the CSS styles in the components root data attribute tag.
+			Using attribute CSS is optional and simplifies adding the component to a CMS such as WordPress.
+		-->
+		<div data-pu-background-image-switch='{
+			"name":"myImageSwitch",
+			"image":"assets/default.jpg",
+			"target":{
+				"querySelector":"#container",
+				"sticky":false
+			},
+			"animate":{
+				"opacity":{"from":0, "to":1},
+				"transform":{"from":"rotate(0deg)", "to":"rotate(360deg)"},
+				"props":{
+					"duration":"1s",
+					"timing":"ease",
+					"delay":".25s"
+				}
+			},
+			"css":[
+				".pu-background-image-switch-comp {height:100%;color:white;font-size:4vmin;text-shadow:-1px -1px 10px #111,1px -1px 10px #111,-1px 1px 10px #111,1px 1px 10px #111;}",
+				".pu-background-image-switch-comp .link {display:inline-block;color:white;text-decoration:none;padding:10px 30px 10px 30px;cursor:pointer;border:solid 2px #666;background-color:#333;margin:20px;border-radius:5px;}",
+				".pu-background-image-switch-comp .link:hover {background-color:#999;}",
+				".pu-background-image-switch-image {position:absolute;top:10%;left:10%;width:80%;height:80%;background:no-repeat center/contain;pointer-events:none;z-index:-1;}",
+				".pu-background-image-switch-image-myImageSwitch {}",
+				".pu-background-image-switch-image-myImage1 {}"
+			]
+		}'>
+			<a class="link" href="https://plutonium.dev" data-pu-link='{"name":"myImage1", "image":"assets/bg1.jpg"}'}">Link 1</a></br>
+			<a class="link" href="https://plutonium.dev" data-pu-link='{"name":"myImage2", "image":"assets/bg2.jpg"}'}">Link 2</a></br>
+			<a class="link" href="https://plutonium.dev" data-pu-link='{"name":"myImage3", "image":"assets/bg3.jpg"}'}">Link 3</a></br>
+			<a class="link" href="https://plutonium.dev" data-pu-link='{"name":"myImage4", "image":"assets/bg4.jpg"}'}">Link 4</a>
+		</div>
+	</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,30 @@
+{
+	"name": "@plutonium-js/vanilla-background-image-switch",
+	"version": "1.0.4",
+	"description": "A vanilla JavaScript component that animates and switches a target background image when hovering elements / links.",
+	"main": "src/index.js",
+	"unpkg": "src/index.js",
+	"jsnext:main": "src/index.js",
+	"scripts": {
+		"build": "node build"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/plutonium-js/vanilla-background-image-switch"
+	},
+	"homepage": "https://plutonium.dev/wp/libraries/vanilla-background-image-switch/",
+	"keywords": [
+		"javascript component",
+		"vanilla javascript",
+		"background image",
+		"animate",
+		"transition",
+		"switch background",
+		"links"
+	],
+	"author": "Jesse Dalessio",
+	"license": "MIT",
+	"devDependencies": {
+		"uglify-es": "^3.3.9"
+	}
+}
